@@ -9,7 +9,7 @@ public class PersonaController {
     public void sortByDireccionCodigo(Persona[] personas) {
         int n = personas.length;
     
-        for (int i = 0; i < n - 1; i++) {
+        for (int i = 0; i < n; i++) {
             int maxIndex = i;
             
             for (int j = i + 1; j < n; j++) {
@@ -30,7 +30,7 @@ public class PersonaController {
         int bajo = 0;
         int alto = personas.length - 1;
 
-        while ( alto <= bajo){
+        while ( alto >= bajo){
             int center = (bajo + alto)/2;
 
             if(personas[center].equalsByCodigoDireccion(codigo)){
